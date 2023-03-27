@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body{
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size:contain;
+  margin: 0;
+}
+
+img{
+  max-width: 100%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+.imgbox{
+  display: flex;
+  position: relative;
+  max-height: 500px;
+  justify-content: center;
+  z-index: 1;
+  padding-top: 53px;
+}
+
+.frase{
+  display: flex;
+}
+
+
+.container{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+section{
+  padding: 1em 0;
+}
+
+
+
+header{
+    background:white ;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.Titulo{
+  padding-left: 16px;
+}
+
+.menu , .cerrar{
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.barra-navegacion{
+  display: contents;
+}
+
+.nav-list{
+  list-style-type: none ;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list li a{
+  text-decoration: none;
+  color: black;
+}
+
+.icono,.titulo-funcion,.parrafo-funcion{
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+}
+
+.funcionalidades{
+  padding-top: 103px;
+}
+
+.cols{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
+
+
+.cols::before{
+  position: absolute;
+  content: '';
+  height: 441px;
+  width: 441px;
+  left: -25.83%;
+  right: 1.94%;
+  top: 80px;
+  bottom: 71.15%;
+  border-radius: 50%;
+  background: rgba(31,201,234,0.1 );
+  background: linear-gradient(180deg, 
+  rgba(31,201,234,0.1 ) 0.00%, 
+  rgba(0,255,162,0.1 ) 100.00%);
+  animation: object1 6s linear infinite;
+}
+
+.cols:after{
+  position: absolute;
+  content: '';
+  height: 258.9246826171875px;
+  width: 258.9739990234375px;
+  left: 0px;
+  top: 198px;
+  border-radius: 0px;
+  border-radius: 50%;
+  background: #77fe6e;
+  background: linear-gradient(174deg, #77fe6e 0.00%, #35efca 100.00%);
+  animation: object3 6s linear infinite;
+}
+
+.esfera{
+  position: absolute;
+  content: '';
+  height: 441px;
+  width: 446px;
+  left: 77px;
+  top: 268px;
+  border-radius: 50%;
+  background: #e0f04b;
+  background: linear-gradient(180deg, rgba(31, 201, 234, 0.48) 0%, rgba(0, 255, 162, 0.102) 100%);
+  animation: object2 6s linear infinite;
+  z-index: -2;
+}
+
+
+.esfera::before{
+  position: absolute;
+  content: '';
+  width: 175.87px;
+  height: 175.83px;
+  left: -89px;
+  top: 190px;
+  border-radius: 50%;
+  background: #1fc9ea;
+  background: linear-gradient(180deg, #1fc9ea 0.00%, #00ffa2 100.00%);
+  animation: object2 6s linear infinite;
+  z-index: -1;
+}
+
+
+@media screen and (max-width:550px) {
+  .nav{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .menu , .cerrar{
+    display: block;
+
+  }
+  
+  .menu a img{
+      
+  }
+  
+  img.close{
+    display: none;
+  }
+
+  .nav{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#00DFAD;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    z-index: 5;
+  }
+
+  .nav.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+   
+  }
+
+  .nav-list li a{
+    color: white;
+    font-weight: bold;
+  }
+}
